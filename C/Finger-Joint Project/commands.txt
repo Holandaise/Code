@@ -1,0 +1,7 @@
+First command to use is avr-gcc to compile all source code into executable
+
+avr-gcc -mmcu=atmega328p -o (OUTPUT FILE.exe) main.c something.c else.c
+
+Next command is used to program the flash memory on the MCU
+
+sudo avrdude -c buspirate -p m328p -P /dev/usb[0-10] -U flash:w:(OUTPUT FILE.exe)
